@@ -45,6 +45,7 @@ def clean_data(data):
 
 ### YOUR CODE HERE ###
 # from_delimited_files(path, validate=True, include_path=False, infer_column_types=True, set_column_types=None, separator=',', header=True, partition_format=None, support_multi_line=False, empty_as_string=False, encoding='utf8')
+# path: Single value or list
 ds = TabularDatasetFactory.from_delimited_files("https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv")
 
 x, y = clean_data(ds)
