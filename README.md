@@ -7,6 +7,7 @@ This model is then compared to an Azure AutoML run.
 
 A diagram illustrating the steps of this project is shown below:
 
+![alt text](https://github.com/HaslRepos/nd00333_AZMLND_Optimizing_a_Pipeline_in_Azure-Starter_Files/blob/master/creating-and-optimizing-an-ml-pipeline.png "Optimizing an ML Pipeline")
 
 Source: Machine Learning Engineer with Microsoft Azure Nanodegree on Udacity
 
