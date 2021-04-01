@@ -19,6 +19,7 @@ Original dataset available on (https://www.kaggle.com/henriqueyamahata/bank-mark
 
 The best performing model was a VotingEnsemble with an accuracy of 0.91712.
 
+
 ## Scikit-learn Pipeline
 
 Main component of the pipeline is the Python script `train.py`, which performs the following steps:
@@ -34,8 +35,6 @@ The Scikit-learn Pipeline is built in a Notebook:
 3. Define Hyperparameters including a policy for early termination and an estimator for the `train.py` script
 4. Perform the Logistic Regression by defining the parameters (`--C` and `max_iter`) in HyperDrive and runnign the Python script `train.py`
 5. Retrieve the metrics for the best model and save the model
-
-**Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
 
 ### Data
 
@@ -71,6 +70,7 @@ Random Parameter Sampling is much faster than Grid Parameter Sampling but also p
 The Bandit Policy defines an early termination policy based on slack criteria, and a frequency and delay interval for evaluation. Any run that doesn't fall within the slack factor or slack amount of the evaluation metric with respect to the best performing run will be terminated. (https://docs.microsoft.com/en-us/python/api/azureml-train-core/azureml.train.hyperdrive.banditpolicy?view=azure-ml-py)
 This policy allows very offensive savings.
 
+
 ## AutoML
 **AutoML** tries to find the best model by automatically running different models and algorithms. The best performing model was `Voting Ensemble`.
 
@@ -96,6 +96,7 @@ The best model identified by AutoML was a VotingEnsemble with an accuracy of *0.
 
 AutoML outperforms the HyperDrive model, although the difference is only marginal.
 With regard to architecture both models pursuit a different approach. The HyperDrive pipeline performes experiments with different parameters based on a single model whereas AutoML examines different models and algorithms.
+
 
 ## Future work
 Apply additional transformations (eg. Synthetic Minority Oversampling Technique) during data preparation to handle the imbalanced dataset. 89 % of the data is labled No and might result in biased predictions.
