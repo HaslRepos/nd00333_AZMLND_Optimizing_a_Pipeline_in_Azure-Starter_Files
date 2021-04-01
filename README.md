@@ -25,8 +25,8 @@ Main component of the pipeline is the Python script `train.py`, which performs t
 1. Loading the dataset
 2. Cleaning the data by removing missing values, encoding fields into categories, transforming text into numbers
 3. Perform SKlearn Logistic Regression defined by two parameters:
-    * `--C` (float): Inverse of regularization strength
-    * `max_iter`(int): Maximum number of iterations taken for the solvers to converge
+   * `--C` (float): Inverse of regularization strength
+   * `max_iter`(int): Maximum number of iterations taken for the solvers to converge
 
 The Scikit-learn Pipeline is built in a Notebook:
 1. Initialize a workspace and an experiment
@@ -88,7 +88,11 @@ The parameters used to define the AutoML Pipeline are:
 ## Pipeline comparison
 The best run of the Logistic Regression model tuned with HyperDrive provided an accuracy of *0.9073*
 
+![alt text](https://github.com/HaslRepos/nd00333_AZMLND_Optimizing_a_Pipeline_in_Azure-Starter_Files/blob/master/HyperDrive%20Top%2010.PNG "HyperDrive - Top 10 Results")
+
 The best model identified by AutoML was a VotingEnsemble with an accuracy of *0.91712*
+
+![alt text](https://github.com/HaslRepos/nd00333_AZMLND_Optimizing_a_Pipeline_in_Azure-Starter_Files/blob/master/AutoML%20Top%2010.PNG "AutoML - Top 10 Results")
 
 AutoML outperforms the HyperDrive model, although the difference is only marginal.
 With regard to architecture both models pursuit a different approach. The HyperDrive pipeline performes experiments with different parameters based on a single model whereas AutoML examines different models and algorithms.
