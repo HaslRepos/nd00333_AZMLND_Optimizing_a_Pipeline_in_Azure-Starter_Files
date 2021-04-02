@@ -17,7 +17,7 @@ This dataset contains data about direct marketing campaigns of a Portuguese bank
 
 Original dataset available on (https://www.kaggle.com/henriqueyamahata/bank-marketing)
 
-The best performing model was a VotingEnsemble with an accuracy of 0.91712.
+The best performing model was a VotingEnsemble with an accuracy of 0.91681.
 
 
 ## Scikit-learn Pipeline
@@ -92,7 +92,7 @@ The best run of the Logistic Regression model tuned with HyperDrive provided an 
 
 ![alt text](https://github.com/HaslRepos/nd00333_AZMLND_Optimizing_a_Pipeline_in_Azure-Starter_Files/blob/master/HyperDrive%20Top%2010.PNG "HyperDrive - Top 10 Results")
 
-The best model identified by AutoML was a VotingEnsemble with an accuracy of *0.91712*
+The best model identified by AutoML was a VotingEnsemble with an accuracy of *0.91681*
 
 ![alt text](https://github.com/HaslRepos/nd00333_AZMLND_Optimizing_a_Pipeline_in_Azure-Starter_Files/blob/master/AutoML%20Top%2010.PNG "AutoML - Top 10 Results")
 
