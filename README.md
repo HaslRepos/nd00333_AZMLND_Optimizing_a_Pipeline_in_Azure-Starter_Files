@@ -76,30 +76,16 @@ This policy allows very offensive savings.
 
 Ensemble learning improves machine learning results and predictive performance by combining multiple models as opposed to using single models. Voting Ensemble predicts based on the weighted average of predicted class probabilities (for classification tasks) or predicted regression targets (for regression tasks). (https://docs.microsoft.com/en-us/azure/machine-learning/concept-automated-ml#ensemble)
 
+AutoML runs various iterations calculating different models. The Voting Ensemble model combines results of the following iterations / models:
 
 | Ensembled Iteration | Ensembled Algorithm | Ensemble Weight |
 | ------------------- |:-------------------:| ---------------:|
 | 1 | XGBoostClassifier | 0.21428571428571427 |
-| 0 | LightGBM      |   0.42857142857142855 |
-| 6 | XGBoostClassifier      |  0.07142857142857142 |
-| 14 | XGBoostClassifier      |  0.14285714285714285 |
-| 11 | XGBoostClassifier      |  0.07142857142857142 |
-| 9 | LogisticRegression      |  0.07142857142857142 |
-
-best_individual_pipeline_score: "0.9155993930197269"
-best_individual_iteration: "1"
-
-
-The parameters used to define the AutoML Pipeline are:
-
-* *experiment_timeout_minutes*: Exit criteria to define max duration of the experiment in minutes (30)
-* *task*: Defines the experiment type (classification)
-* *primary_metric*: Metric to be improved (accuracy)
-* *n_cross_validations*: Number of cross validation to be performed (5)
-* *training_data*: Dataset (ds_cleaned)
-* *label_column_name*: Column name of the target to be estimated (y)
-* *compute_target*: Compute ressources to run the experiment on (compute_target)
-
+| 0 | LightGBM | 0.42857142857142855 |
+| 6 | XGBoostClassifier | 0.07142857142857142 |
+| 14 | XGBoostClassifier | 0.14285714285714285 |
+| 11 | XGBoostClassifier | 0.07142857142857142 |
+| 9 | LogisticRegression | 0.07142857142857142 |
 
 ## Pipeline comparison
 The best run of the Logistic Regression model tuned with HyperDrive provided an accuracy of *0.9073*
